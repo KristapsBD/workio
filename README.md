@@ -6,36 +6,25 @@ We help workers connect with employers
 
 ## How to run locally
 
-### 1.
-
 First of all clone the repository
 
 ```bash
 git clone https://github.com/KristapsDB/workio
 ```
 
-### 2.
-
-Start the React frontend development server
-
-It should be available on https://localhost:8080
+`frontend`
 
 ```bash
-cd frontend
-yarn
-yarn serve
+$ yarn
+$ yarn serve
 ```
 
-### 3.
-
-Start the Node.js backend instance
-
-It should be available on https://localhost:8000
+`backend`
 
 ```bash
-cd ../backend
-yarn
-yarn serve
+$ yarn
+$ yarn build
+$ yarn start
 ```
 
 ## Contributions (?)
