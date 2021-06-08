@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { FaMagento } from 'react-icons/fa';
+import { BiNetworkChart } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
-  background: #101522;
+  background: #2214a7;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
 `;
 
-export const NavIcon = styled(FaMagento)`
+export const NavIcon = styled(BiNetworkChart)`
   margin-right: 0.5rem;
 `;
 
@@ -67,7 +67,7 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: #2214a7;
   }
 `;
 
@@ -76,7 +76,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #4b59f7;
+    border-bottom: 2px solid #f4976c;
   }
 
   @media screen and (max-width: 960px) {
@@ -113,7 +113,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #f4976c;
       transition: all 0.3s ease;
     }
   }
@@ -129,4 +129,6 @@ export const NavBtnLink = styled(Link)`
   width: 100%;
   border: none;
   outline: none;
+  display: inline;
+
 `;

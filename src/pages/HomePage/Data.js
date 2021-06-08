@@ -4,13 +4,13 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Marketing Agency',
-  headline: 'Lead Generation Specialist for Online Businesses',
+  topLine: 'We Care to help',
+  headline: 'Connecting workers with employers using machine learning',
   description:
-    'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',
+    'We help teens in finding work and offer workforce outsourcing for businesses.',
   buttonLabel: 'Get Started',
   imgStart: '',
-  img: require('../../images/svg-1.svg'),
+  img: require('../../images/agree.svg'),
   alt: 'Credit Card',
   start: ''
 };
@@ -21,13 +21,13 @@ export const homeObjTwo = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Instant Setup',
-  headline: 'Extremely quick onboarding process',
+  topLine: 'Access Anywhere',
+  headline: 'Browse for work & submit help requests with any device',
   description:
-    "Once you've joined, our team of specialist will reach out to you and get you set up in minutes.",
+    "It does not matter whether you use laptop, tablet or phone. Workio works great on all. Now you can be aware of potential job opportunities or get help wherever you are.",
   buttonLabel: 'Learn More',
   imgStart: '',
-  img: require('../../images/svg-2.svg'),
+  img: require('../../images/responsive.svg'),
   alt: 'Vault',
   start: ''
 };
@@ -38,14 +38,13 @@ export const homeObjThree = {
   lightTopLine: false,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Sarah Jeni',
-  headline:
-    'Ultra helped me increase my revenue by over 3X in less than 3 months!',
+  topLine: 'Simplify Finding Work',
+  headline: 'Find the best work opportunities',
   description:
-    "Their team is wonderful! I can't believe I didn't start working with them earlier.",
-  buttonLabel: 'View Case Study',
+    "Just add your skills and previous experience. We will find the best job opportunities for you, using the power of machine learning.",
+  buttonLabel: 'Learn More',
   imgStart: 'start',
-  img: require('../../images/profile.jpg'),
+  img: require('../../images/volunteer.jpg'),
   alt: 'Vault',
   start: 'true'
 };
@@ -56,13 +55,13 @@ export const homeObjFour = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Secure Database',
-  headline: 'All your data is stored on our secure server',
+  topLine: 'Self Improvement',
+  headline: 'Gather reviews and gain experience',
   description:
-    'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
+    'With our unique rating system each teen can rate the workplace environment and every employer can review the helpers work quality.',
   buttonLabel: 'Sign Up Now',
   imgStart: 'start',
-  img: require('../../images/svg-3.svg'),
+  img: require('../../images/rate.svg'),
   alt: 'Vault',
   start: 'true'
 };

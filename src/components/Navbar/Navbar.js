@@ -43,7 +43,7 @@ function Navbar() {
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
-              ULTRA
+              Workio
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -56,25 +56,37 @@ function Navbar() {
               </NavItem>
               <NavItem>
                 <NavLinks to='/services' onClick={closeMobileMenu}>
-                  Services
+                  Solutions
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to='/products' onClick={closeMobileMenu}>
-                  Products
+                  Contacts
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to='/sign-up'>
-                    <Button primary>SIGN UP</Button>
-                  </NavBtnLink>
+                  <>
+                    <NavBtnLink to='/sign-up'>
+                      <Button primary>SIGN UP</Button>
+                    </NavBtnLink>
+                    <NavBtnLink to='/sign-in'>
+                      <Button primary>LOG IN</Button>
+                    </NavBtnLink>
+                  </>                  
                 ) : (
+                <>
                   <NavBtnLink to='/sign-up'>
                     <Button onClick={closeMobileMenu} fontBig primary>
                       SIGN UP
                     </Button>
                   </NavBtnLink>
+                  <NavBtnLink to='/sign-in'>
+                    <Button onClick={closeMobileMenu} fontBig primary>
+                      LOG IN
+                    </Button>
+                  </NavBtnLink>
+                </>                  
                 )}
               </NavItemBtn>
             </NavMenu>
