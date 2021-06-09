@@ -31,8 +31,5 @@ module.exports = merge(common, {
       },
     },
   },
-  plugins: [
-    new DuplicateCheckerPlugin(),
-    new BundleAnalyzerPlugin(),
-  ],
+  plugins: [new DuplicateCheckerPlugin(), new BundleAnalyzerPlugin()],
 });
