@@ -68,10 +68,10 @@ function Navbar() {
                 {button ? (
                   <>
                     <NavBtnLink to='/sign-up'>
-                      <Button primary>SIGN UP</Button>
+                      <Button primary>REGISTER</Button>
                     </NavBtnLink>
                     <NavBtnLink to='/sign-in'>
-                      <Button primary>LOG IN</Button>
+                      <Button primary>SIGN IN</Button>
                     </NavBtnLink>
                   </>                  
                 ) : (

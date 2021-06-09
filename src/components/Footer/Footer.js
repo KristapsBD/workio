@@ -33,9 +33,11 @@ function Footer() {
     <FooterContainer>
       <FooterSubscription>
         <FooterSubHeading>
-          Join our exclusive membership to receive the latest news and trends
+          If you still have any questions or offers, send your letters to: team@workio.com
         </FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
+        <FooterSubText>
+          Uniting workers with employers with the power of machine learning.
+        </FooterSubText>
         <Form>
           <FormInput name='email' type='email' placeholder='Your Email' />
           <Button fontBig>Subscribe</Button>
@@ -92,7 +94,7 @@ function Footer() {
             </SocialIconLink>
             <SocialIconLink
               href={
-                '//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
+                '//www.youtube.com/'
               }
               rel='noopener noreferrer'
               target='_blank'

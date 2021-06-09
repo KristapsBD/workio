@@ -4,9 +4,9 @@ export const homeObjOne = {
   lightTopLine: true,
   lightTextDesc: true,
   topLine: 'Sign up Today',
-  headline: 'Join today to receive an exclusive offer',
+  headline: 'Join today and simplify the hiring process',
   description:
-    'Get access to our exclusive diamond king package. Limited quantity available.',
+    'Find work as a teen. Outsource workers as a business. Hiring made simple.',
   buttonLabel: 'Sign Up',
   imgStart: '',
   img: require('../../images/svg-2.svg'),
