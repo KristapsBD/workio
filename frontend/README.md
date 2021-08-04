@@ -18,7 +18,7 @@ $ yarn
 ### Run the development server
 
 ```bash
-$ yarn serve
+$ yarn start
 ```
 
 ### Create a production build
