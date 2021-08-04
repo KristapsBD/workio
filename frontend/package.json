@@ -2,8 +2,8 @@
   "private": true,
   "main": "src/index.tsx",
   "scripts": {
-    "start": "parcel serve ./src/index.html --port 8080 --cache-dir build/cache",
-    "build": "parcel build ./src/index.html --out-dir build/output --cache-dir build/cache"
+    "start": "parcel serve ./src/index.html --port 8080",
+    "build": "parcel build ./src/index.html --out-dir build"
   },
   "devDependencies": {
     "@types/react": "^17.0.14",
