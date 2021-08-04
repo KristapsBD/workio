@@ -1,54 +1,19 @@
 {
+  "private": true,
+  "main": "src/index.tsx",
   "scripts": {
-    "serve": "webpack-dev-server --config webpack.dev.js --mode development --hot --host 0.0.0.0",
-    "build": "webpack --config webpack.prod.js --mode production",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --fix"
+    "start": "parcel serve ./src/index.html --port 8080 --cache-dir build/cache",
+    "build": "parcel build ./src/index.html --out-dir build/output --cache-dir build/cache"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.12.1",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
-    "@babel/preset-typescript": "^7.10.1",
-    "@types/react": "^16.9.36",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-helmet": "^6.1.0",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.5.3",
-    "duplicate-package-checker-webpack-plugin": "^3.0.0",
-    "eslint": "^7.10.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.3.0",
-    "image-webpack-loader": "^6.0.0",
-    "jimp": "^0.13.0",
-    "prettier": "^2.1.2",
-    "react-is": "^17.0.0",
-    "responsive-loader": "^1.2.0",
-    "sharp": "^0.25.4",
-    "style-loader": "^1.2.1",
-    "svg-url-loader": "^6.0.0",
-    "ts-loader": "^8.0.4",
-    "typescript": "^3.9.5",
-    "url-loader": "^4.1.1",
-    "webpack": "^4.43.0",
-    "webpack-bundle-analyzer": "^3.8.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.1.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^2.1.0"
   }
 }

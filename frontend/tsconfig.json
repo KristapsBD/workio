@@ -1,23 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["dom", "ES2016"],
     "jsx": "react",
-    "allowJs": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./src/*"]
-    }
+      "~*": ["./src/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["node_modules", "dist", "webpack.*.js"]
+  "include": ["src/**/*"]
 }
