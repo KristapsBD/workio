@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "./firebase";
 import "./styles/css/normalize.css";
 
 import App from "./App";

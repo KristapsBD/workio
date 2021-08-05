@@ -18,20 +18,19 @@ const S = createStyle({
     font-size: 16px;
     font-family: "Poppins", sans-serif;
 
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
     &:hover {
-      background-color: #362aa3;
+      background-color: #2e1add;
     }
   `,
 });
 
 type ButtonProps = {
   label: string;
+  onClick?: () => void;
 };
 
-function Button({ label }: ButtonProps) {
-  return <S.Button>{label}</S.Button>;
+function Button({ label, onClick = () => {} }: ButtonProps) {
+  return <S.Button onClick={onClick}>{label}</S.Button>;
 }
 
 export default Button;

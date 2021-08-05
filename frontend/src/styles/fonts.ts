@@ -3,7 +3,7 @@ import WebFont from "webfontloader";
 
 export const WebFontConfig = {
   google: {
-    families: ["Poppins"],
+    families: ["Poppins", "Roboto"],
   },
 };
 
