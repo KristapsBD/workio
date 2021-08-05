@@ -17,3 +17,5 @@ build/
 dist/
 src/config/*
 !src/config/.gitkeep
+.cache
+.firebase
