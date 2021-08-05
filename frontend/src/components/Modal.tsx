@@ -26,7 +26,7 @@ const S = createStyle({
   Container: styled.div`
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
+    border-radius: 2px;
     width: 100%;
     max-width: 568px;
     background-color: #343439;
@@ -84,38 +84,29 @@ const S = createStyle({
     text-align: center;
     font-family: "Poppins", sans-serif;
   `,
+  CloseButton: styled.button`
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 100%;
+    color: #f1f1f1;
+    background-color: transparent;
+    &:hover {
+      background-color: #434349;
+    }
+  `,
+  Padding: styled.div`
+    height: 16px;
+  `,
+  Icon: styled.span`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
 });
 
-S.CloseButton = styled.button`
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 8px;
-  border-radius: 100%;
-  color: #f1f1f1;
-  background-color: transparent;
-  &:hover {
-    background-color: #434349;
-  }
-`;
-
-S.Padding = styled.div`
-  height: 16px;
-`;
-
-S.Icon = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export interface ModalProps {
-  title: string;
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }) => {
+function Modal({ title, isOpen, onClose, children }: ModalProps) {
   const containerRef = useRef(null);
 
   useOutsideAlerter(containerRef, () => {
@@ -147,9 +138,11 @@ const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }) => {
       </S.Container>
     </S.Wrapper>
   );
-};
+}
 
-export const useModal = () => {
+export default Modal;
+
+export function useModal() {
   const [isOpen, setOpen] = useState(false);
 
   const open = () => setOpen(true);
@@ -165,6 +158,11 @@ export const useModal = () => {
       onClose: close,
     },
   };
-};
+}
 
-export default Modal;
+export type ModalProps = {
+  title: string;
+  isOpen: boolean;
+  children?: React.ReactNode;
+  onClose: () => void;
+};

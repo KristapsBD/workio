@@ -7,10 +7,6 @@ import Modal, { useModal } from "@/components/Modal";
 
 import firebase from "@/firebase";
 
-const continueWithProvider = async (provider: firebase.auth.AuthProvider) => {
-  firebase.auth().signInWithPopup(provider);
-};
-
 function Landing() {
   const [user, loading, error] = useAuthState(firebase.auth());
   const modal = useModal();
@@ -21,14 +17,6 @@ function Landing() {
         fontFamily: "Poppins, sans-serif",
       }}
     >
-      <Modal title="Register" {...modal.handlers}>
-        <Button
-          label="Continue with Google"
-          onClick={() =>
-            continueWithProvider(new firebase.auth.GoogleAuthProvider())
-          }
-        />
-      </Modal>
       <div
         style={{
           maxWidth: "400px",
@@ -37,8 +25,6 @@ function Landing() {
       >
         <br />
         <TextInput name="password" type="password" label="Password" />
-        <br />
-        <Button label="Register" onClick={() => modal.open()} />
       </div>
     </div>
   );

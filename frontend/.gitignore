@@ -14,5 +14,6 @@ yarn-error.log*
 .npm/
 yarn.lock
 build/
+dist/
 src/config/*
 !src/config/.gitkeep

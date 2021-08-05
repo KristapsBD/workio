@@ -14,7 +14,7 @@ const S = createStyle({
     font-size: 16px;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     color: #f1f1f1;
   `,
   Message: styled.p<{ status?: TextInputStatus }>`
@@ -67,19 +67,25 @@ const S = createStyle({
   Input: styled.input<{ status?: TextInputStatus }>`
     outline: none;
     width: 100%;
+    font-family: "Poppins";
 
     padding: 10px 8px;
     border-radius: 2px;
     background-color: transparent;
     border: 1px solid transparent;
-    background-color: #38383e;
+    background-color: #434347;
 
     font-size: 16px;
     color: #fff;
 
+    &:hover {
+      border-color: #fff;
+    }
+
     &:focus {
-      border-color: #efefef;
-      box-shadow: 0 0 0 4px #2214a75f;
+      border-color: #fff;
+      background-color: transparent;
+      box-shadow: 0 0 0 4px #ffffff3f;
     }
 
     ${({ status }) =>
@@ -90,14 +96,19 @@ const S = createStyle({
   `,
 });
 
-function TextInput({ label, type, name }: TextInputProps) {
+function TextInput({ label, type, name, placeholder }: TextInputProps) {
   const [status, setStatus] = useState<TextInputStatus | undefined>();
 
   return (
     <S.Container>
       {label && <S.Label htmlFor={name}>{label}</S.Label>}
       <S.InputWrapper>
-        <S.Input type={type} name={name} status={status} />
+        <S.Input
+          type={type}
+          name={name}
+          status={status}
+          placeholder={placeholder}
+        />
         {status && (
           <S.InputIcon
             status={status}
@@ -137,4 +148,5 @@ export type TextInputProps = {
   type: string;
   name: string;
   label?: string;
+  placeholder?: string;
 };
