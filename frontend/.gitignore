@@ -19,3 +19,4 @@ src/config/*
 !src/config/.gitkeep
 .cache/
 .firebase/
+cache/
