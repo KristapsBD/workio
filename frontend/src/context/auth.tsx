@@ -1,19 +1,14 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 
+import { User } from "@/types";
 import firebase, { firestore } from "@/firebase";
 
-type User = {
-  id: string;
-  displayName: string;
-  avatarUrl: string;
-} | null;
-
-type ContextState = { loading: boolean; user: User };
+type ContextState = { loading: boolean; user: User | null };
 
 const FirebaseAuthContext = createContext<ContextState | undefined>(undefined);
 
 function FirebaseAuthProvider({ children }) {
-  const [user, setUser] = useState<User>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const value = { loading, user };
 

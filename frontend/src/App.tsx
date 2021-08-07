@@ -9,11 +9,12 @@ import TopNav from "./components/navigation/TopNav";
 import MainSideNav from "./components/navigation/MainSideNav";
 
 // Pages
-import LandingPage from "./pages/Landing";
 import Error404Page from "./pages/error/404";
+import LandingPage from "./pages/Landing";
+import UserProfilePage from "./pages/UserProfile";
 
 // Context
-import FirebaseAuthProvider from "./context/auth";
+import { useFirebaseAuth } from "./context/auth";
 
 const S = createStyle({
   Container: styled.div`
@@ -31,6 +32,7 @@ const S = createStyle({
 });
 
 function App() {
+  const { user } = useFirebaseAuth();
   const sideNavItems = [
     {
       route: "/",
@@ -49,7 +51,7 @@ function App() {
       badge: 10,
     },
     {
-      route: "/profile",
+      route: `/profile/${user?.id || ""}`,
       label: "Profile",
       icon: "FiUser",
     },
@@ -58,23 +60,21 @@ function App() {
   loadFonts();
 
   return (
-    <FirebaseAuthProvider>
-      <BrowserRouter>
-        <S.Container>
-          <MainSideNav items={sideNavItems} />
-          <S.Page>
-            <TopNav />
-            <Switch>
-              <Route exact path="/" component={LandingPage} />
-              <Route path="/profile/:userId" component={LandingPage} />
-              <Route path="/inbox" component={LandingPage} />
-              <Route path="/map" component={LandingPage} />
-              <Route component={Error404Page} />
-            </Switch>
-          </S.Page>
-        </S.Container>
-      </BrowserRouter>
-    </FirebaseAuthProvider>
+    <BrowserRouter>
+      <S.Container>
+        <MainSideNav items={sideNavItems} />
+        <S.Page>
+          <TopNav />
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/profile/:userId" component={UserProfilePage} />
+            <Route path="/inbox" component={LandingPage} />
+            <Route path="/map" component={LandingPage} />
+            <Route component={Error404Page} />
+          </Switch>
+        </S.Page>
+      </S.Container>
+    </BrowserRouter>
   );
 }
 
