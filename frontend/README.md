@@ -15,6 +15,8 @@ $ cd workio/frontend
 $ yarn
 ```
 
+> Requires a Firebase config file. Create one at `/src/config/firebaseConfig.json`.
+
 ### Run the development server
 
 ```bash
