@@ -26,3 +26,9 @@ $ yarn start
 ```bash
 $ yarn build
 ```
+
+### Deploy to firebase hosting
+
+```bash
+$ yarn deploy
+```

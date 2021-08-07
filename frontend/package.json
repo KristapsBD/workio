@@ -3,7 +3,8 @@
   "main": "src/index.tsx",
   "scripts": {
     "start": "parcel serve index.html --port 8080 --out-dir build",
-    "build": "parcel build index.html --out-dir build"
+    "build": "parcel build index.html --out-dir build",
+    "deploy": "yarn build && firebase deploy"
   },
   "alias": {
     "@/*": "./src/*"
